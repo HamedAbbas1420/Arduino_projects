@@ -5,5 +5,5 @@ Resistor 1k
 Jumper wires
 Breadboard
 Arduino Uno
-LED
+LED (3v-5v)
 */
