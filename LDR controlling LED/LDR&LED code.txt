@@ -1,7 +1,5 @@
-
-
 int LDR = 0;           //connect LDR on analog pin A0
-int LDRValue = 0;      //that’s a variable to store LDR values
+int LDRValue = 0;      //thatâ€™s a variable to store LDR values
 int light_sensitivity = 500;    //This is the approx value of light surrounding your LDR
  
 void setup()
@@ -12,7 +10,7 @@ void setup()
  
 void loop()
   {
-    LDRValue = analogRead(LDR);     //reads the ldr’s value through LDR 
+    LDRValue = analogRead(LDR);     //reads the ldrâ€™s value through LDR 
     Serial.println(LDRValue);       //prints the LDR values to serial monitor
     delay(50);        //This is the speed by which LDR sends value to arduino
  
