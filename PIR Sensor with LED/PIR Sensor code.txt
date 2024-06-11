@@ -1,0 +1,46 @@
+int Sensor =2;
+int Led = 13;
+int buzzer=12;
+
+void setup() {   
+  
+       Serial.begin(9600);
+       pinMode(Sensor,INPUT);
+       pinMode(Led,OUTPUT);
+       pinMode(buzzer,OUTPUT);
+        
+       Serial.print("أنتظر ");
+
+       for(int x=0;x<5;x++)
+       {
+          Serial.print (".");
+          delay(1000);
+       }
+  
+       Serial.println("\n الحساس نشط *");
+}
+
+
+void loop() {
+  
+    if(digitalRead(Sensor)==HIGH)
+     {
+  
+       digitalWrite(Led,HIGH);
+       digitalWrite(buzzer,HIGH);
+       Serial.print (digitalRead(Sensor));
+       Serial.println(" يعمل  ");
+       delay(1000);
+     }
+    
+    else 
+     {
+        digitalWrite(Led,LOW);
+        digitalWrite(buzzer,LOW);
+        Serial.print (digitalRead(Sensor));
+        Serial.println(" لا يعمل ");
+        delay(1000);
+      }
+
+
+}
